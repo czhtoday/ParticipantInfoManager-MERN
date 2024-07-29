@@ -7,8 +7,18 @@ body, html {
 
 /* Home Page */
 
+.HomePage nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px 0;
+}
+
+
 .HomePage .button {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin: 20px auto 15px;
   width: 40%; 
   padding: 15px;
@@ -25,10 +35,13 @@ body, html {
 }
 
 .HomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background: linear-gradient(to bottom, #004225 15%, #66bb6a 80%); 
   color: white;
   text-align: center;
-  padding-top: 10vh; 
+  padding-top: 5vh; 
   min-height: 100vh;
 }
 
@@ -41,9 +54,12 @@ body, html {
   margin-top: 20px;
 }
 
+.HomePage header {
+  margin-top: 1vh; 
+}
+
 
 /* for add and edit page */
-/* General styles for participant form pages */
 .participant-form-page {
   display: flex;
   flex-direction: column;
@@ -103,4 +119,15 @@ body, html {
 
 .participant-form-page button[type="submit"]:hover {
   background-color: #ffa726;
+}
+
+
+.manage-participant-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 0 20px 20px;
+  background-color: #f4f4f4;
 }

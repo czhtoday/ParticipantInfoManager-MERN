@@ -1,0 +1,88 @@
+/* Styles for the participant table */
+
+
+.participant-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.participant-table th,
+.participant-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+/* Header styles */
+.participant-table thead th {
+  background-color: #004225;
+  color: white;
+}
+
+/* Search input styling */
+.search-input {
+  display: block;
+  width: 90%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for action buttons */
+.button-edit,
+.button-delete {
+  padding: 8px 15px; 
+  color: white;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 90px; 
+}
+
+.button-edit {
+  background-color: #66bb6a;
+}
+
+.button-delete {
+  background-color: #ff4d4d; 
+}
+
+.button-edit:hover {
+  background-color: #57a457; /* Darker shade of light green */
+}
+
+.button-delete:hover {
+  background-color: #e60000; 
+}
+
+/* Container for the search area */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Styling for the search input */
+.search-input {
+  margin-left: 10px; 
+  flex-grow: 1;      
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Adjust the label styling for consistency */
+.search-container span {
+  color: #004225;
+  font-weight: bold;
+}

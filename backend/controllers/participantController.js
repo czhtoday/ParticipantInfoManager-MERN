@@ -1,6 +1,6 @@
 import Participant from '../models/Participant.js';
 
-// create a new participant 
+// Create a new participant 
 export const createParticipant = async (req, res) => {
   try {
     const participant = new Participant(req.body);
@@ -11,7 +11,7 @@ export const createParticipant = async (req, res) => {
   }
 };
 
-// get all the participants
+// Get all the participants
 export const getParticipants = async (req, res) => {
   try {
     const participants = await Participant.find();
@@ -21,7 +21,7 @@ export const getParticipants = async (req, res) => {
   }
 };
 
-// get a participant
+// Get a participant
 export const getParticipant = async (req, res) => {
   try {
     const participant = await Participant.findById(req.params.id);
@@ -34,7 +34,7 @@ export const getParticipant = async (req, res) => {
   }
 };
 
-// update the participant's information
+// Update the participant's information
 export const updateParticipant = async (req, res) => {
   try {
     const participant = await Participant.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
@@ -47,7 +47,7 @@ export const updateParticipant = async (req, res) => {
   }
 };
 
-// delete a participate
+// Delete a participate
 export const deleteParticipant = async (req, res) => {
   try {
     const participant = await Participant.findByIdAndDelete(req.params.id);

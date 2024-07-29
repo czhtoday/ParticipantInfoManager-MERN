@@ -1,10 +1,13 @@
 import React from 'react';
 import ParticipantTable from '../components/ParticipantTable';
+import Header from '../components/Header';
+import '../App.css'; 
+
 
 function ManageParticipantsPage() {
   return (
-    <div>
-      <h1>Manage Participants</h1>
+    <div className="manage-participant-table">
+      <Header />
       <ParticipantTable />
     </div>
   );
