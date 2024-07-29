@@ -1,3 +1,12 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Home Page */
+
 .HomePage .button {
   display: block;
   margin: 20px auto 15px;
@@ -31,4 +40,70 @@
   padding: 10px;
   margin-top: 20px;
 }
+
+
+/* participant-page */
+.add-participant-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 0 20px 20px;
+  background-color: #f4f4f4;
+}
+
+.add-participant-page form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Styling for each form group to ensure labels and inputs are on the same line */
+.add-participant-page form div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Adjust the label to align correctly */
+.add-participant-page label {
+  flex: 1;
+  color: #004225;
+  font-weight: bold;
+  text-align: left;
+  padding-right: 10px; /* Adds space between the label and the input field */
+}
+
+/* Styling for input fields to ensure alignment and full utilization of available space */
+.add-participant-page input[type="text"],
+.add-participant-page input[type="date"] {
+  flex: 2;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Styling for the submit button */
+.add-participant-page button[type="submit"] {
+  background-color:  #66bb6a;
+  transition: background-color 0.3s ease;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.add-participant-page button[type="submit"]:hover {
+  background-color: #ffa726;
+}
+
+
 

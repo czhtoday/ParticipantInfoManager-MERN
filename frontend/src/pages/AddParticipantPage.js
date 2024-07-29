@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { addParticipant } from '../services/participantService'; 
 import Header from '../components/Header';
+import '../App.css'; 
+
 
 
 function AddParticipantPage() {
@@ -60,7 +63,7 @@ function AddParticipantPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/participants', formData);
+      await addParticipant(formData);
       setShowSuccessModal(true); // display success modal
     } catch (error) {
       console.error('Failed to add participant:', error);

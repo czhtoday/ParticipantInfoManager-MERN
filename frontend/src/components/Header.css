@@ -1,15 +1,22 @@
 .header {
   background-color: #004225; 
   color: white;
+  font-weight: bold;
   display: flex;
   align-items: center;
   padding: 10px 20px;
   height: 15vh; 
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .header-logo {
   height: 80%;
   margin-right: 20px;
+}
+
+.header-nav {
+  flex-grow: 1;
 }
 
 .header-nav .nav-link {
@@ -19,6 +26,8 @@
   margin-left: 10px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
+  border-radius: 20px; 
 }
 
 .header-nav .nav-link:hover {

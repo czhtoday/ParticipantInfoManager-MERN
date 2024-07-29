@@ -1,13 +1,23 @@
 import axios from 'axios';
 
-const getParticipants = async () => {
-  try {
-    const response = await axios.get('http://localhost:8080/api/participants');
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching participants:', error);
-    throw error;
-  }
+const baseUrl = 'http://localhost:8080/api/participants';
+
+export const getAllParticipants = async () => {
+  const response = await axios.get(baseUrl);
+  return response.data;
 };
 
-export { getParticipants };
+export const addParticipant = async (participantData) => {
+  const response = await axios.post(baseUrl, participantData);
+  return response.data;
+};
+
+export const updateParticipant = async (id, updatedData) => {
+  const response = await axios.put(`${baseUrl}/${id}`, updatedData);
+  return response.data;
+};
+
+export const deleteParticipant = async (id) => {
+  const response = await axios.delete(`${baseUrl}/${id}`);
+  return response.data;
+};
