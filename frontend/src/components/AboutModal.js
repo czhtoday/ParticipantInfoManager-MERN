@@ -6,12 +6,12 @@ function AboutModal() {
 
   return (
     <>
-      <button className="aboutButton" onClick={() => setIsOpen(true)}>About</button>
+      <button className="aboutButton" onClick={() => setIsOpen(true)}>ABOUT</button>
       {isOpen && (
         <div className="modal">
           <button className="closeButton" onClick={() => setIsOpen(false)}>X</button>
           <p>This system is designed to manage participants efficiently...</p>
-          <button className="closeButton" onClick={() => setIsOpen(false)}>Close</button>
+          <button className="closeButton" onClick={() => setIsOpen(false)}>CLOSE</button>
         </div>
       )}
     </>

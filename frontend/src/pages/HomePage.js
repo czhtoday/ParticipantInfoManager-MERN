@@ -10,11 +10,11 @@ function HomePage() {
       <header>
         <img src="/Uplift-logo.svg" alt="Logo" className="Logo" />
         <h1 className='title-1'>Uplift NW</h1>
-        <h2 className='title-1'>Participant Management System</h2>
+        <h2 className='title-1'>PARTICIPANT MANAGEMENT SYSTEM</h2>
       </header>
       <nav>
-        <Link to="/add-participant" className="button">Add New Participant</Link>
-        <Link to="/manage-participants" className="button">Manage Participants</Link>
+        <Link to="/add-participant" className="button">ADD NEW PARTICIPANT</Link>
+        <Link to="/manage-participants" className="button">MANAGE PARTICIPANTS</Link>
         <AboutModal />
       </nav>
     </div>

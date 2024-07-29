@@ -71,7 +71,7 @@ function ParticipantForm({ formData, handleChange, handleJobPlacementChange, han
         <label>End Date:</label>
         <input type="date" name="endDate" value={formData.jobPlacement.endDate} onChange={handleJobPlacementChange} />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">SUBMIT</button>
     </form>
   );
 }
