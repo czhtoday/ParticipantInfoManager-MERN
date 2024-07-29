@@ -42,8 +42,9 @@ body, html {
 }
 
 
-/* participant-page */
-.add-participant-page {
+/* for add and edit page */
+/* General styles for participant form pages */
+.participant-form-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +54,7 @@ body, html {
   background-color: #f4f4f4;
 }
 
-.add-participant-page form {
+.participant-form-page form {
   width: 100%;
   max-width: 600px;
   background-color: #fff;
@@ -63,14 +64,14 @@ body, html {
 }
 
 /* Styling for each form group to ensure labels and inputs are on the same line */
-.add-participant-page form div {
+.participant-form-page form div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
 }
 
 /* Adjust the label to align correctly */
-.add-participant-page label {
+.participant-form-page label {
   flex: 1;
   color: #004225;
   font-weight: bold;
@@ -79,17 +80,16 @@ body, html {
 }
 
 /* Styling for input fields to ensure alignment and full utilization of available space */
-.add-participant-page input[type="text"],
-.add-participant-page input[type="date"] {
+.participant-form-page input[type="text"],
+.participant-form-page input[type="date"] {
   flex: 2;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-
 /* Styling for the submit button */
-.add-participant-page button[type="submit"] {
+.participant-form-page button[type="submit"] {
   background-color:  #66bb6a;
   transition: background-color 0.3s ease;
   color: white;
@@ -101,9 +101,6 @@ body, html {
   width: 100%;
 }
 
-.add-participant-page button[type="submit"]:hover {
+.participant-form-page button[type="submit"]:hover {
   background-color: #ffa726;
 }
-
-
-

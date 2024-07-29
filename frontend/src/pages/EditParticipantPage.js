@@ -5,7 +5,6 @@ import ParticipantForm from '../components/ParticipantForm';
 import Header from '../components/Header';
 import '../App.css'; 
 import useFormData from '../hooks/useFormData'; 
-import ParticipantFormModal from '../components/ParticipantFormModal';
 
 
 
@@ -80,7 +79,7 @@ function EditParticipantPage() {
   };
 
   return (
-    <div className="edit-participant-page">
+    <div className="participant-form-page">
       <Header />
       <ParticipantForm
         formData={formData}
