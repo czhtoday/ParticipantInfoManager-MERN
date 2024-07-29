@@ -1,19 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AddParticipantPage from './pages/AddParticipantPage';
 import ManageParticipantsPage from './pages/ManageParticipantsPage';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/add-participant" component={AddParticipantPage} />
-          <Route path="/manage-participants" component={ManageParticipantsPage} />
-        </Switch>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} exact />
+        <Route path="/add-participant" element={<AddParticipantPage />} />
+        <Route path="/manage-participants" element={<ManageParticipantsPage />} />
+      </Routes>
     </Router>
   );
 }

@@ -1,0 +1,26 @@
+.header {
+  background-color: #004225; 
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  height: 15vh; 
+}
+
+.header-logo {
+  height: 80%;
+  margin-right: 20px;
+}
+
+.header-nav .nav-link {
+  background-color: #66bb6a;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-nav .nav-link:hover {
+  background-color: #ffa726; 
+}
