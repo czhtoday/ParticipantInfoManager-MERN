@@ -50,12 +50,40 @@ function EditParticipantPage() {
           [nameParts[1]]: type === 'checkbox' ? checked : value
         }
       }));
-    } else {
+    } else if (name in formData.jobPlacement) {
+      // Special handling for jobPlacement which is already nested
       setFormData(prevFormData => ({
         ...prevFormData,
-        [name]: type === 'checkbox' ? checked : value
+        jobPlacement: {
+          ...prevFormData.jobPlacement,
+          [name]: value
+        }
       }));
+    } else {
+      // Handling regular properties
+      if (type === 'checkbox') {
+        setFormData(prevFormData => ({
+          ...prevFormData,
+          [name]: checked
+        }));
+      } else {
+        setFormData(prevFormData => ({
+          ...prevFormData,
+          [name]: value
+        }));
+      }
     }
+  };
+
+  const handleJobPlacementChange = (event) => {
+    const { name, value } = event.target;
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      jobPlacement: {
+        ...prevFormData.jobPlacement,
+        [name]: value
+      }
+    }));
   };
 
   const handleSubmit = async (event) => {
@@ -80,6 +108,7 @@ function EditParticipantPage() {
       <ParticipantForm
         formData={formData}
         handleChange={handleChange}
+        handleJobPlacementChange={handleJobPlacementChange}
         handleSubmit={handleSubmit}
       />
       {showSuccessModal && (

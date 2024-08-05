@@ -7,7 +7,7 @@ import {
   getParticipants,
   getParticipant,
   updateParticipant,
-  deleteParticipant
+  deleteParticipant,
 } from '../controllers/participantController.js';
 
 // Create a new participant
