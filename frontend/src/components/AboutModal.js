@@ -10,8 +10,8 @@ function AboutModal() {
       {isOpen && (
         <div className="modal">
           <button className="closeButton" onClick={() => setIsOpen(false)}>X</button>
-          <div>
-            <p><strong>Introducing Our Easy-to-Use Information Entry System</strong></p>
+          <div className="introduction">
+            <p className='smallTitle'><strong> Information Entry System </strong></p>
 
             <p>Our information entry system is designed with simplicity and accessibility in mind, making it incredibly easy for anyone to use without the need for specialized equipment or technical expertise. Whether you are at home, in the office, or on the go, our system is engineered to be fully operational from any personal electronic device, ensuring you can enter and modify data whenever and wherever necessary.</p>
 
