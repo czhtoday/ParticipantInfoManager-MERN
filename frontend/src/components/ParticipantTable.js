@@ -56,7 +56,7 @@ function ParticipantTable() {
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Date of Birth</th>
-                        <th>Living Location</th>
+                        <th>Gender</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -66,7 +66,7 @@ function ParticipantTable() {
                             <td>{participant.firstname}</td>
                             <td>{participant.lastname}</td>
                             <td>{new Date(participant.dateofbirth).toLocaleDateString()}</td>
-                            <td>{participant.livingLocation}</td>
+                            <td>{participant.gender}</td>
                             <td>
                                 <Link to={`/edit-participant/${participant._id}`} className="button-edit">Edit</Link>
                                 <button onClick={() => deleteRow(participant._id)} className="button-delete">Delete</button>

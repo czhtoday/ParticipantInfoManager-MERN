@@ -9,6 +9,7 @@ import useFormData from '../hooks/useFormData';
 
 
 
+
 function AddParticipantPage() {
   const [formData, setFormData] = useFormData();
   // Managing the display state of the modal
@@ -17,18 +18,33 @@ function AddParticipantPage() {
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
-    if (type === 'checkbox') {
+    const nameParts = name.split('.');  // Split the name by the dot to check for nested properties
+  
+    if (nameParts.length === 2) {
+      // Handling nested properties such as "livingLocation.state"
       setFormData(prevFormData => ({
         ...prevFormData,
-        [name]: checked
+        [nameParts[0]]: {
+          ...prevFormData[nameParts[0]],
+          [nameParts[1]]: type === 'checkbox' ? checked : value
+        }
       }));
     } else {
-      setFormData(prevFormData => ({
-        ...prevFormData,
-        [name]: value
-      }));
+      // Handling regular properties
+      if (type === 'checkbox') {
+        setFormData(prevFormData => ({
+          ...prevFormData,
+          [name]: checked
+        }));
+      } else {
+        setFormData(prevFormData => ({
+          ...prevFormData,
+          [name]: value
+        }));
+      }
     }
   };
+  
 
   const handleJobPlacementChange = (event) => {
     const { name, value } = event.target;
@@ -41,15 +57,19 @@ function AddParticipantPage() {
     }));
   };
 
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await addParticipant(formData);
-      setShowSuccessModal(true); // display success modal
+      const response = await addParticipant(formData);
+      setShowSuccessModal(true);
     } catch (error) {
-      console.error('Failed to add participant:', error);
+      console.error('Failed to add participant:', error.response ? error.response.data : error.message);
+      console.log('Submitting data:', JSON.stringify(formData, null, 2));
     }
   };
+  
 
   const handleContinue = () => {
     setShowSuccessModal(false); // close the modal

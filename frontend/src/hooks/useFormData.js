@@ -7,8 +7,14 @@ function useFormData() {
     dateofbirth: '',
     gender: '',
     race: '',
-    livingLocation: '',
-    workingLocation: '',
+    livingLocation: {
+      state: '',
+      city: ''
+    },
+    workingLocation: {
+      state: '',
+      city: ''
+    },
     housingStatus: '',
     educationLevel: '',
     healthInsurance: false,

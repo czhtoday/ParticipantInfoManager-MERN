@@ -1,4 +1,8 @@
 import React from 'react';
+import LocationSelector from './LocationSelector';
+import { stateOptions, cityOptions } from '../data/locations'; 
+
+
 
 function ParticipantForm({ formData, handleChange, handleJobPlacementChange, handleSubmit }) {
   return (
@@ -25,11 +29,23 @@ function ParticipantForm({ formData, handleChange, handleJobPlacementChange, han
       </div>
       <div>
         <label>Living Location:</label>
-        <input type="text" name="livingLocation" value={formData.livingLocation} onChange={handleChange} required />
+        <LocationSelector
+          namePrefix="livingLocation"
+          value={{ state: formData.livingLocation.state, city: formData.livingLocation.city }}
+          onChange={handleChange}
+          stateOptions={stateOptions}
+          cityOptions={cityOptions}
+        />
       </div>
       <div>
         <label>Working Location:</label>
-        <input type="text" name="workingLocation" value={formData.workingLocation} onChange={handleChange} required />
+        <LocationSelector
+          namePrefix="workingLocation"
+          value={{ state: formData.workingLocation.state, city: formData.workingLocation.city }}
+          onChange={handleChange}
+          stateOptions={stateOptions}
+          cityOptions={cityOptions}
+        />
       </div>
       <div>
         <label>Housing Status:</label>

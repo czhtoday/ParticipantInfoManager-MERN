@@ -4,9 +4,7 @@ import { getParticipantById, updateParticipant } from '../services/participantSe
 import ParticipantForm from '../components/ParticipantForm';
 import Header from '../components/Header';
 import '../App.css'; 
-import useFormData from '../hooks/useFormData'; 
-
-
+import useFormData from '../hooks/useFormData';
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -15,7 +13,7 @@ const formatDate = (dateString) => {
 
 function EditParticipantPage() {
   const [formData, setFormData] = useFormData();
-  const [showSuccessModal, setShowSuccessModal] = useState(false); // State to manage the display of the success modal
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -42,23 +40,20 @@ function EditParticipantPage() {
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
-    if (type === 'checkbox') {
+    const nameParts = name.split('.'); // Split the name by the dot to check for nested properties
+
+    if (nameParts.length === 2) {
       setFormData(prevFormData => ({
         ...prevFormData,
-        [name]: checked
-      }));
-    } else if (event.target.name in formData.jobPlacement) {
-      setFormData(prevFormData => ({
-        ...prevFormData,
-        jobPlacement: {
-          ...prevFormData.jobPlacement,
-          [name]: value
+        [nameParts[0]]: {
+          ...prevFormData[nameParts[0]],
+          [nameParts[1]]: type === 'checkbox' ? checked : value
         }
       }));
     } else {
       setFormData(prevFormData => ({
         ...prevFormData,
-        [name]: value
+        [name]: type === 'checkbox' ? checked : value
       }));
     }
   };
@@ -66,16 +61,17 @@ function EditParticipantPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await updateParticipant(id, formData);
-      setShowSuccessModal(true); // Show the success modal on successful update
+      const response = await updateParticipant(id, formData);
+      setShowSuccessModal(true);
     } catch (error) {
-      console.error('Failed to update participant:', error);
+      console.error('Failed to update participant:', error.response ? error.response.data : error.message);
+      console.log('Submitting data:', JSON.stringify(formData, null, 2));
     }
   };
 
   const handleContinue = () => {
-    setShowSuccessModal(false); // Close the modal
-    navigate('/manage-participants'); // Navigate back to the manage participants page
+    setShowSuccessModal(false);
+    navigate('/manage-participants');
   };
 
   return (
@@ -84,7 +80,6 @@ function EditParticipantPage() {
       <ParticipantForm
         formData={formData}
         handleChange={handleChange}
-        handleJobPlacementChange={handleChange}
         handleSubmit={handleSubmit}
       />
       {showSuccessModal && (

@@ -3,13 +3,19 @@ import Participant from '../models/Participant.js';
 // Create a new participant 
 export const createParticipant = async (req, res) => {
   try {
-    const participant = new Participant(req.body);
-    await participant.save();
-    res.status(201).json(participant);
+    if (Array.isArray(req.body)) {  
+      const participants = await Participant.insertMany(req.body);  
+      res.status(201).json(participants);
+    } else {
+      const participant = new Participant(req.body);
+      await participant.save();
+      res.status(201).json(participant);
+    }
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
+
 
 // Get all the participants
 export const getParticipants = async (req, res) => {

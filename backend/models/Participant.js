@@ -6,8 +6,14 @@ const participantSchema = new mongoose.Schema({
   dateofbirth: { type: Date, required: true },
   gender: { type: String, required: true },
   race: { type: String, required: true },
-  livingLocation: { type: String, required: true },
-  workingLocation: { type: String, required: true },
+  livingLocation: { 
+    state: { type: String, required: true },
+    city: { type: String, required: true }
+  },
+  workingLocation: { 
+    state: { type: String, required: true },
+    city: { type: String, required: true }
+  },
   housingStatus: { type: String, required: true },
   educationLevel: { type: String, required: true },
   healthInsurance: { type: Boolean, required: true },
