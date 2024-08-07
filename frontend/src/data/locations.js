@@ -29,18 +29,23 @@ export const cityOptions = {
     { value: 'Buffalo', label: 'Buffalo' }
   ],
   'Texas': [
-    { value: 'Austin', label: 'Austin' }
+    { value: 'Austin', label: 'Austin' },
+    { value: 'Dallas', label: 'Dallas' }
   ],
   'Florida': [
-    { value: 'Miami', label: 'Miami' }
+    { value: 'Miami', label: 'Miami' },
+    { value: 'Orlando', label: 'Orlando' }
   ],
   'Oregon': [
-    { value: 'Portland', label: 'Portland' }
+    { value: 'Portland', label: 'Portland' },
+    { value: 'Medford', label: 'Medford' }
   ],
   'Nevada': [
-    { value: 'Las Vegas', label: 'Las Vegas' }
+    { value: 'Las Vegas', label: 'Las Vegas' },
+    { value: 'Reno', label: 'Reno' }
   ],
   'Arizona': [
-    { value: 'Phoenix', label: 'Phoenix' }
+    { value: 'Phoenix', label: 'Phoenix' },
+    { value: 'Tucson', label: 'Tucson' }
   ]
 };
