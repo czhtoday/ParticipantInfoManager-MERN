@@ -46,6 +46,76 @@ body, html {
   min-height: 100vh;
 }
 
+/* Login Page */
+
+
+.LoginPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #004225 15%, #66bb6a 80%); 
+  color: white;
+  text-align: center;
+  padding-top: 5vh; 
+  min-height: 100vh;
+}
+
+
+.FormGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.FormGroup label {
+  width: 80px;
+  text-align: left;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.FormGroup input {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+
+.LoginPage .RegisterButton, .LoginPage .SubmitButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 5px;
+  width: 20%; 
+  padding: 10px;
+  background-color: #004225; 
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px; 
+  border: 2px solid #004225; 
+}
+
+.LoginPage .RegisterButton:hover, .LoginPage .SubmitButton:hover{
+  background-color: #cc8400;
+}
+
+/* Register Page */
+
+.RegisterPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #004225 15%, #66bb6a 80%); 
+  color: white;
+  text-align: center;
+  padding-top: 5vh; 
+  min-height: 100vh;
+}
+
 .AboutButton {
   background-color: transparent;
   color: #004225;
@@ -57,6 +127,25 @@ body, html {
 
 .HomePage header {
   margin-top: 1vh; 
+}
+
+.RegisterPage .RegisterButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 5px;
+  width: 20%; 
+  padding: 10px;
+  background-color: #004225; 
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px; 
+  border: 2px solid #004225; 
+}
+
+.RegisterPage .RegisterButton:hover {
+  background-color: #cc8400;
 }
 
 
@@ -80,23 +169,20 @@ body, html {
   border-radius: 8px;
 }
 
-/* Styling for each form group to ensure labels and inputs are on the same line */
 .participant-form-page form div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
 }
 
-/* Adjust the label to align correctly */
 .participant-form-page label {
   flex: 1;
   color: #004225;
   font-weight: bold;
   text-align: left;
-  padding-right: 10px; /* Adds space between the label and the input field */
+  padding-right: 10px; 
 }
 
-/* Styling for input fields to ensure alignment and full utilization of available space */
 .participant-form-page input[type="text"],
 .participant-form-page input[type="date"] {
   flex: 2;
@@ -105,7 +191,6 @@ body, html {
   border-radius: 4px;
 }
 
-/* Styling for the submit button */
 .participant-form-page button[type="submit"] {
   background-color:  #66bb6a;
   transition: background-color 0.3s ease;

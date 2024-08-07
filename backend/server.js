@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import participantRoutes from './routes/participantRoutes.js';
+import authRoutes from './routes/authRoutes.js';  
 import notFound from './middleware/notFound.js'
 import errorHandler from './middleware/errorHandler.js';
 import logger from './middleware/logger.js';
@@ -21,6 +22,7 @@ app.use(express.json());
 connectDB();
 // API router
 app.use('/api/participants', participantRoutes);
+app.use('/api/auth', authRoutes); 
 // If no matching route is found, use the notFound middleware
 app.use(notFound);
 // If a matching route is found and an error is thrown, it is handled by errorHandler

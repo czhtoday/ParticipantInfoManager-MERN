@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 import AboutModal from '../components/AboutModal';
 import '../App.css'; 
 
 
 function HomePage() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+    if (!isAuthenticated) {
+      navigate('/login');
+    }
+  }, [navigate]);
+  
   return (
     <div className="HomePage">
       <header>
