@@ -1,4 +1,4 @@
-# Uplift Participant Manager (Information Entry and Manage System)
+# Uplift NW Participant Manager (Information Entry and Manage System)
 
 ## Overview
 
@@ -61,9 +61,20 @@ The application includes a basic authentication system:
 
 ## Setup Instructions
   1. Clone the repository: `git clone https://github.com/czhtoday/UpliftNW_Participant_Manager.git`
-  2. Install dependencies: `npm install`
-  3. Start the server: `npm start`
-  4. Navigate to `http://localhost:3000` in your web browser.
+  2. Install dependencies for the backend: 
+    `cd backend`
+    `npm install`
+  3. Install dependencies for the front: 
+    `cd frontend`
+    `npm install`
+  4. Install MongoDB, Follow the MongoDB official installation guide for your operating system: https://www.mongodb.com/try/download/community
+  5. Start MongoDB server: `mongod`
+  6. Create a .env file in the 'backend' directory of the project and add the following content:
+    `PORT=8080`
+    `MONGO_URI=mongodb://127.0.0.1:27017/your-database-name`
+  7. Start the frontend server in the frontend directory: `npm start`
+  8. Start the backend server in the backend directory: `npm start`
+  9. Navigate to `http://localhost:3000` in your web browser.
 
 ## Future Enhancements
 
