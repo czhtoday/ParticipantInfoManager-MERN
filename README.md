@@ -14,6 +14,8 @@ Zhihang Cheng
 - **Mobile Responsive**: Accessible via any personal electronic device, allowing data management on the go.
 - **Data Integrity**: Guarantees that all inputted data follows a uniform format, ensuring comprehensive data capture necessary for subsequent analysis.
 - **Expandable**: Built with scalability in mind, ready to include additional features such as AI analytics and data visualization tools.
+- **Single Page Application**: This project is a SPA, offering faster load times and a seamless user experience without page reloads.
+
 
 ## Technical Stack
 
@@ -42,13 +44,28 @@ Zhihang Cheng
   - `services/`: API services that interact with the backend.
   - `hooks/`: Custom React hooks, like useForm.
   - `pages/`: React components that correspond to routes.
+    - `LoginPage.js`: Handles user login.
+    - `RegisterPage.js`: Handles user registration.
+    - `HomePage.js`: Main landing page after login.
+    - `AddParticipantPage.js`: Form for adding new participants.
+    - `ManageParticipantsPage.js`: Displays a table of all participants with options to edit or delete.
+    - `EditParticipantPage.js`: Form for editing existing participant information.
   - `App.js`, `index.js`: Entry points for React application.
   - `App.css`, `index.css`: CSS files for styling the application.
 
-
+## Authentication
+The application includes a basic authentication system:
+- **Login**: Users can log in with their email and password to access the main dashboard and participant management features.
+- **Register**: New users can register an account with a username, email, and password.
+- **Protected Routes**: Access to the main dashboard and participant management pages is restricted to authenticated users only.
 
 ## Setup Instructions
   1. Clone the repository: `git clone https://github.com/czhtoday/UpliftNW_Participant_Manager.git`
   2. Install dependencies: `npm install`
   3. Start the server: `npm start`
   4. Navigate to `http://localhost:3000` in your web browser.
+
+## Future Enhancements
+
+- **Integration with Data Platforms**: Further development to integrate with platforms like Salesforce.
+- **AI Analytics and Data Visualization**: Incorporate AI-driven analytics and graphical data visualizations.

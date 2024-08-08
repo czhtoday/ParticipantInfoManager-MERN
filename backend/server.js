@@ -19,7 +19,9 @@ app.use(cors());
 // Parse JSON request body
 app.use(express.json());
 // Connect the MongoDB
-connectDB();
+if (process.env.NODE_ENV !== 'test') {
+  connectDB(); // Only connect to DB if not in test environment
+}
 // API router
 app.use('/api/participants', participantRoutes);
 app.use('/api/auth', authRoutes); 
@@ -28,4 +30,8 @@ app.use(notFound);
 // If a matching route is found and an error is thrown, it is handled by errorHandler
 app.use(errorHandler);
 // Start the server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+export default app;
