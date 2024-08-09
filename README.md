@@ -6,11 +6,11 @@ Uplift Participant Manager is a robust full stack web-based application designed
 
 ## Background Story
 
-This project was inspired by a pressing need identified within a non-governmental organization (NGO) named Uplift NW, that focuses on providing services to its participants. The NGO was struggling with data analysis, aiming to better understand their current participants to offer more effective services. However, the data collected was inconsistent, with many crucial information points missing, making it inefficient for the organization to utilize the data effectively.
+This project was inspired by a pressing need identified within a nonprofit organization named Uplift NW, that focuses on providing services to its participants. The organization was struggling with data analysis, aiming to better understand their current participants to offer more effective services. However, the data collected was inconsistent, with many crucial information points missing, making it inefficient for the organization to utilize the data effectively.
 
 The organization's internal team lacked technical expertise, making digitalization of participant data collection essential. Tools like Google Forms proved cumbersome for system updates, while professional tools like Salesforce posed a steep learning curve and operational barriers.
 
-Given the organization’s challenges, I decided to develop a custom solution tailored to their specific needs. This program aims to streamline data collection, ensure consistency in the information gathered, and facilitate easy updates and management of participant data. By providing a user-friendly and efficient system, the NGO can better understand and serve their participants, ultimately enhancing their impact.
+Given the organization’s challenges, I decided to develop a custom solution tailored to their specific needs. This program aims to streamline data collection, ensure consistency in the information gathered, and facilitate easy updates and management of participant data. By providing a user-friendly and efficient system, the organization can better understand and serve their participants, ultimately enhancing their impact.
 
 ## Author
 
