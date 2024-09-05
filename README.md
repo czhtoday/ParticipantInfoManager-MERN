@@ -4,6 +4,12 @@
 
 Uplift Participant Manager is a robust full stack web-based application designed to facilitate the easy entry and management of participant information. The system is built to ensure data consistency and provide a scalable solution that can integrate with larger data ecosystems like Salesforce.
 
+## Watch Demonstration Video
+
+[![Watch the Additional Video](https://img.youtube.com/vi/N6RIV3pazL4/hqdefault.jpg)]
+(https://youtu.be/N6RIV3pazL4)
+
+
 ## Background Story
 
 This project was inspired by a pressing need identified within a nonprofit organization named Uplift NW, that focuses on providing services to its participants. The organization was struggling with data analysis, aiming to better understand their current participants to offer more effective services. However, the data collected was inconsistent, with many crucial information points missing, making it inefficient for the organization to utilize the data effectively.
