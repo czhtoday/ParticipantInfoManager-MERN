@@ -6,8 +6,8 @@ Uplift Participant Manager is a robust full stack web-based application designed
 
 ## Watch Demonstration Video
 
-[![Watch the Additional Video](https://img.youtube.com/vi/N6RIV3pazL4/hqdefault.jpg)]
-(https://youtu.be/N6RIV3pazL4)
+[![Watch the Additional Video](https://img.youtube.com/vi/N6RIV3pazL4/hqdefault.jpg)](https://youtu.be/N6RIV3pazL4)
+
 
 
 ## Background Story
